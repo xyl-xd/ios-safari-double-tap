@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .list {
+        padding: 0;
+        margin: 0 0 4rem;
+        list-style: none;
+      }
+
+      .list-item {
+        display: flex;
+        border-radius: 3px;
+      }
+
+      .list-item__link {
+        flex: 1;
+        padding: 6px 10px;
+        background-color: transparent;
+        color: #444;
+        text-decoration: none;
+      }
+
+      .list-item__close {
+        visibility: hidden;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      .list-item__close.fix {
+        visibility: visible;
+      }
+
+      .list-item:hover {
+        background-color: #eee;
+      }
+
+      .list-item:hover .list-item__close {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <i>设置close button hover时出现，需要点击两次才能跳转</i>
+    <ul class="list">
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close">x</button>
+      </li>
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close">x</button>
+      </li>
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close">x</button>
+      </li>
+    </ul>
+
+    <i>单次点击跳转（预期结果）</i>
+    <ul class="list">
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close fix">x</button>
+      </li>
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close fix">x</button>
+      </li>
+      <li class="list-item">
+        <a class="list-item__link" href="https://www.baidu.com">Baidu</a>
+        <button class="list-item__close fix">x</button>
+      </li>
+    </ul>
+  </body>
+</html>
